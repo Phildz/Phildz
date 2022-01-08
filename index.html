@@ -1,74 +1,131 @@
 <!DOCTYPE html>
 <html>
-<head>
-   <title>Projet 3</title>
-   <meta charset="utf-8">	
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="css/normalize.css">
-   	
-	<!-- Pour toutes résolutions R >= 992 pixels -->
-	<link rel="stylesheet" type="text/css" href="">
+	<head>
+	<title>Projet 3</title>
+	<meta charset="utf-8">	
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		
+		<!-- Pour toutes résolutions R >= 992 pixels -->
+		<link rel="stylesheet" type="text/css" href="">
 
-	<!-- Pour une résolution : 992 pixels > R >= 768 pixels -->
-	<link rel="stylesheet" media="screen and (min-width: 768px) and (max-width: 991px)" href=""/>
+		<!-- Pour une résolution : 992 pixels > R >= 768 pixels -->
+		<link rel="stylesheet" media="screen and (min-width: 768px) and (max-width: 991px)" href=""/>
 
-	<!-- Pour une résolution : R < 768 pixels -->
-	<link rel="stylesheet" type="text/css" href="styles.css">
+		<!-- Pour une résolution : R < 768 pixels -->
+		<link rel="stylesheet" type="text/css" href="styles.css">
 
-	<script src="https://kit.fontawesome.com/579348ba25.js" crossorigin="anonymous"></script>
-</head>
-<body>
-	<header>
-		<div class="logo">
-			<img class="img-logo" src="images\logo\ohmyfood.png" 
-			alt="ohmyfood"/>
-			<i class="icone-map fas fa-map-marker-alt fa-lg"></i>			
-		</div>
-	</header>
-	<main>
-		<section class="accueil">
+		<script src="https://kit.fontawesome.com/579348ba25.js" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<header>
+			<div class="logo">
+				<img class="img-logo" src="images\logo\ohmyfood.png" 
+				alt="ohmyfood"/>
+				<i class="icone-map fas fa-map-marker-alt fa-lg"></i>			
+			</div>
+		</header>
+		<main>
+			<section class="accueil fond-gris-tertiaire">
+				
+				<div class="localisation fond-gris-secondaire">
+					<h3 class="localisation--ville">Paris, Belleville</h3>
+				</div>
+
+				<div class="titres">
+					<h1 class="titres__n1">
+						Réservez le menu qui vous convient
+					</h1>
+					<h2 class="titres__n2">
+						Découvrez des restaurants d'exception, sélectionnés par nos soins.
+					</h2>
+					<div class="titres__bouton fond-secondaire">
+						<h3 class="titres__n3 ">Explorer nos restaurants</h3>
+					</div>
+				</div>
+
+			</section>
+
+			<section class="fonctionnement">
+				<h2>Fonctionnement</h2>
+				<div class="bloc-etapes">
+					<div class="etape fond-gris-tertiaire">
+						<div class="numberCircle fond-primaire">1</div>			
+						<i class="etape-icone fas fa-mobile-alt couleur-gris-primaire"></i>					
+						<h3>Choisissez un restaurant</h3>
+					</div>
+					<div class="etape fond-gris-tertiaire">
+						<div class="numberCircle fond-primaire">2</div>
+						<i class="etape-icone fas fa-list couleur-gris-primaire"></i>
+						<h3>Composez votre menu</h3>
+					</div>
+					<div class="etape fond-gris-tertiaire">
+						<div class="numberCircle fond-primaire">3</div>
+						<i class="etape-icone fas fa-store couleur-primaire"></i>
+						<h3>Dégustez au restaurant</h3>
+					</div>
+				</div>
+
+			</section>
+
+			<section class="restaurant fond-gris-secondaire">
+				<h2 class="restaurant-titre">Restaurants</h2>
+				<div class="bloc-restaurant">			
+
+					<div class="restaurant-carte">
+						<a href="palette_du_gout.html">
+							<img class="img-restaurant" src="images\restaurants\jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="la palette du goût" />	
+							<h3 class="restaurant-nom">La palette du goût</h3>				
+							<i class="restaurant-icone far fa-heart"></i>
+							<p class="restaurant-lieu">Ménilmontant</p>
+							<p class="restaurant-stick fond-tertiaire couleur-tertiaire-foncé">Nouveau</p>
+						</a>
+								
+					</div>
+
+					<div class="restaurant-carte">
+						<img class="img-restaurant" src="images\restaurants\stil-u2Lp8tXIcjw-unsplash.jpg" alt="la note enchantée" />					
+						<h3 class="restaurant-nom">La note enchantée</h3>				
+						<i class="restaurant-icone couleur-primaire fas fa-heart"></i>					
+						<i class="restaurant-icone-main-noir fas fa-hand-pointer"></i>
+						<i  class="restaurant-icone-main-blanc far fa-hand-pointer"></i>
+						<p class="restaurant-lieu">Charonne</p>
+						<p class="restaurant-stick fond-tertiaire couleur-tertiaire-foncé">Nouveau</p>		
+					</div>
+
+					<div class="restaurant-carte">
+						<img class="img-restaurant" src="images\restaurants\toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="a la française" />			
+						<h3 class="restaurant-nom">A la française</h3>					
+						<i class="restaurant-icone far fa-heart"></i>
+						<p class="restaurant-lieu">Cité Rouge</p>						
+					</div>
+
+					<div class="restaurant-carte">
+						<img class="img-restaurant" src="images\restaurants\louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="le delice des sens" />					
+						<h3 class="restaurant-nom">Le délice des sens</h3>				
+						<i class="restaurant-icone far fa-heart"></i>
+						<p class="restaurant-lieu">Folie-Méricourt</p>						
+					</div>
+
+				</div>
+			</section>
+		</main>
+
+		<footer class="fond-gris-primaire">
+			<img class="img-logo-footer" src="images\logo\ohmyfood.png" alt="ohmyfood"/>
+			<ul class="footer-donnees">
+				<li class="footer-titres1et2">
+					<i class="footer-icone-couverts fas fa-utensils"></i>
+					Proposer un restaurant
+				</li>
+				<li class="footer-titres1et2">
+					<i class="footer-icone-poignee fas fa-hands-helping"></i>
+					Devenir partenaire
+				</li>
+				<li class="footer-titres3et4">Mentions légales</li>
+				<li class="footer-titres3et4">Contact</li>
+			</ul>
 			
-			<div class="localisation">
-				<h3 class="localisation--ville">Paris, Belleville</h3>
-			</div>
-
-			<div class="titres">
-				<h1 class="titres__n1">
-					Réservez le menu qui vous convient
-				</h1>
-				<h2 class="titres__n2">
-					Découvrez des restaurants d'exception, sélectionnés par nos soins.
-				</h2>
-				<div class="titres__bouton">
-					<h3 class="titres__n3">Explorer nos restaurants</h3>
-				</div>
-			</div>
-
-		</section>
-
-		<section class="fonctionnement">
-			<h2>Fonctionnement</h2>
-			<div class="bloc-etapes">
-				<div class="etape">
-					<div class="numberCircle">1</div>					
-					<i class="etape-icone fas fa-mobile-alt"></i>					
-					<h3>Choisissez un restaurant</h3>
-				</div>
-				<div class="etape">
-					<div class="numberCircle">2</div>
-					<i class="etape-icone fas fa-list"></i>
-					<h3>Composez votre menu</h3>
-				</div>
-				<div class="etape">
-					<div class="numberCircle">3</div>
-					<i class="etape-icone fas fa-store"></i>
-					<h3>Dégustez au restaurant</h3>
-				</div>
-			</div>
-
-		</section>
-
-
-	</main>
-</body>
+		</footer>
+	</body>
 </html>
