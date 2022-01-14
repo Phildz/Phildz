@@ -402,51 +402,68 @@
 
     /* Animation "Spinner" */
 
-    main { 
-        animation: apparition-fondu ease 15s; 
+    .accueil, main {
+        /*animation: name duration timing-function delay iteration-count direction fill-mode;*/              
+                
+        animation: fondu ease 9s;        
         animation-fill-mode: forwards; 
         animation-iteration-count: 1; 
-    } 
-    @keyframes apparition-fondu { 
-        0% { 
+    }    
+    @keyframes fondu {
+        0% {        
         opacity: 0; 
-        } 
+        }
+        80%{
+            opacity: 0;
+        }
         100% { 
         opacity: 1; 
-        } 
-    }     
+        }        
+    }    
     
-    .spinner {
-        margin: 0 auto;
-        width: 200px;
-        height: 200px;
-        position: relative;
-
-        animation: disparition-fondu ease 8s; 
+    .bloc-spinner{
+        margin: 14px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;        
+        
+        animation-delay: 0s;
+        animation: disparition-fondu linear 15s; 
         animation-fill-mode: forwards; 
-        animation-iteration-count: 1;
+        animation-iteration-count: 1;   
+    }
+    .spinner { 
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;       
+        /*width: auto;
+        height: auto;*/
+        margin-left: 50px;                
     }
     @keyframes disparition-fondu { 
-        0% { 
-        opacity: 1; 
-        } 
-        70% { 
-        opacity: 0;         
-        }
-        100% {
-        opacity: 0;
-        position: absolute;
+        0% {                 
+            opacity: 1; 
+        }        
+        100% {            
+            position: absolute;
+            left: -200px;       
+            opacity: 0;        
         }
     }
 
+    .spinner1, .spinner2{
+        width: 100px;
+        height: 100px;
+        position: relative;
+    }
     .spinner1 div {        
         position: absolute;
         width: 100%;
         height: 100%;
-        border: 20px dashed transparent;
+        border: 10px dashed transparent;
         border-top-color: #ad60f5;;
         border-radius: 50%;
-        animation: spinner1-un 1.5s linear infinite;
+        animation: spinner1-un 1.5s linear infinite;        
     }
     .spinner1 div:nth-child(2) {
         border: 10px dashed transparent;
@@ -454,25 +471,25 @@
         animation: spinner1-deux 1.5s linear infinite;
     }
     @keyframes spinner1-un {
-        0% { transform: rotate(0deg); border-width: 20px; }
+        0% { transform: rotate(0deg); border-width: 10px; }
         50% { transform: rotate(180deg); border-width: 1px; }
-        100% { transform: rotate(360deg); border-width: 20px; }
+        100% { transform: rotate(360deg); border-width: 10px; }
     }
     @keyframes spinner1-deux {
         0% { transform: rotate(0deg); border-width: 1px; }
-        50% { transform: rotate(180deg); border-width: 20px; }
+        50% { transform: rotate(180deg); border-width: 10px; }
         100% { transform: rotate(360deg); border-width: 1px; }
-    }      
+    } 
+
     .spinner2 div {        
-        position: absolute;
-        left:150px;
-        top:50%;
+        position: absolute;        
         width: 50%;
         height: 50%;
-        border: 20px dashed transparent;
+        border: 10px dashed transparent;
         border-top-color: #ad60f5;;
         border-radius: 50%;
         animation: spinner2-un 1.5s linear infinite;
+        /*margin-right: 50%;*/
     }
     .spinner2 div:nth-child(2) {
         border: 10px dashed transparent;
@@ -480,13 +497,13 @@
         animation: spinner2-deux 1.5s linear infinite;
     }
     @keyframes spinner2-un {
-        0% { transform: rotate(0deg); border-width: 20px; }
+        0% { transform: rotate(0deg); border-width: 10px; }
         50% { transform: rotate(-180deg); border-width: 1px; }
-        100% { transform: rotate(-360deg); border-width: 20px; }
+        100% { transform: rotate(-360deg); border-width: 10px; }
     }
     @keyframes spinner2-deux {
         0% { transform: rotate(0deg); border-width: 1px; }
-        50% { transform: rotate(-180deg); border-width: 20px; }
+        50% { transform: rotate(-180deg); border-width: 10px; }
         100% { transform: rotate(-360deg); border-width: 1px; }
     }
 }
