@@ -478,7 +478,8 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        position: relative;
+        
+        
     }
     /*.menu h1{
                
@@ -509,11 +510,11 @@
     
     .choix p{
         margin: 10px 20px 10px 10px;
-        font-size: 1rem;
+        font-size: 4vw;
     }
     .choix h3{
         margin: 10px 20px 0px 10px;
-        font-size: 1.2rem;
+        font-size: 4.5vw;        
     }
     .prix{
         font-weight: bold;
@@ -527,72 +528,105 @@
 
     /* Animation "Apparition des menus" */
 
+
     /* Animation "Sélection d'un choix de sous-menu" */
 
-    .choix::before{
+    .choix{
+        position: relative;
+    }
+    .choix:hover{
+        cursor: pointer;        
+    } 
+
+        /* Animation GLISSEMENT VOLET SUR LA GAUCHE */
+    .ligne-prix::before{
         content: "";
-        width: 70px;
-        height: 70px;
+        width: 20%;
+        height: 100%;
         border-radius: 0 20px 20px 0;        
         background: var(--couleur-tertiaire-foncé);        
         position: absolute;
         top: 0;
-        right: -33px;
-        z-index: -1;
-
-        transition: transform 500ms ease-in;
+        right: 0;
+        z-index: -1;        
     }    
-    .choix:hover::before{        
+    .choix:hover > .ligne-prix::before{
+        animation: volet 500ms ease-in;                      
         display: block;                       
         z-index: 0;
-        transform: translateX(-55px);
     }
-
-    .choix:hover{
-        cursor: pointer;
-    } 
-
-    .choix:hover .prix{
-        transition: transform 500ms ease-in;        
-        transform: translateX(-55px);
-        margin-left: 60px;        
+    @keyframes volet {
+        from{
+            width: 0px;
+        }
+        to{
+            width: 70px;
+        }
     }
-
-    .détail{
-        width: 100%;
+        
+        /* Animation GLISSEMENT PRIX SUR LA GAUCHE */     
+    .prix{
+        transition: transform 500ms ease-in;    
+    }
+    .choix:hover .prix{                
+        transform: translateX(-15vw);                               
+    }
+        
+        /* Animation REPLI TEXTE CHOIX */
+    .détail{               
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
     }
-    
+    .choix:hover .détail{
+        animation: repli-texte 500ms ease-in;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+    }
+    @keyframes repli-texte {
+        from{
+            width: 100%;
+        }
+        to{
+            width: 63%;
+        }
+    }
 
-    /*.choix:hover .détail{
-        animation: cesure 500ms ease-in;
-    } 
-    @keyframes cesure {
-        0%{
-           
-            white-space: nowrap; 
-        }        
-        100%{            
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow:ellipsis;
-        }        
-    }*/
-    /*.choix:hover .détail{        
+        /* Animation REPLI TITRE CHOIX */
+    .choix h3{        
         white-space: nowrap;
         overflow: hidden;
-        text-overflow: ellipsis;
-    }*/
-    
-       
+        text-overflow: ellipsis;       
+    }
+    .choix:hover > h3{
+        animation: repli-titre 500ms ease-in;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+    }    
+    @keyframes repli-titre {
+        from{
+            width: 100%;
+        }
+        to{
+            width: 70%;
+        }
+    } 
 
     
      
+    /*animation: name duration timing-function delay iteration-count direction fill-mode;*/
     
     
-    
+
+
+
+
+
+
+
+
+
+
     /* Au clic sur “Contact”, un renvoi vers une adresse mail est effectué. */
 
     /* Remplissage du coeur sur hover */
