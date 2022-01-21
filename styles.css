@@ -478,6 +478,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        position: relative;
     }
     /*.menu h1{
                
@@ -528,21 +529,67 @@
 
     /* Animation "Sélection d'un choix de sous-menu" */
 
-    .choix::after{
-        content:"";
-        width: 20%;
-        height: auto;
-        border-radius: 0 20% 20% 0;
-        background: var(--couleur-tertiaire-foncé);
+    .choix::before{
+        content: "";
+        width: 70px;
+        height: 70px;
+        border-radius: 0 20px 20px 0;        
+        background: var(--couleur-tertiaire-foncé);        
+        position: absolute;
+        top: 0;
+        right: -33px;
+        z-index: -1;
 
+        transition: transform 500ms ease-in;
+    }    
+    .choix:hover::before{        
+        display: block;                       
+        z-index: 0;
+        transform: translateX(-55px);
+    }
+
+    .choix:hover{
+        cursor: pointer;
+    } 
+
+    .choix:hover .prix{
+        transition: transform 500ms ease-in;        
+        transform: translateX(-55px);
+        margin-left: 60px;        
+    }
+
+    .détail{
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
     
+
+    /*.choix:hover .détail{
+        animation: cesure 500ms ease-in;
+    } 
+    @keyframes cesure {
+        0%{
+           
+            white-space: nowrap; 
+        }        
+        100%{            
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow:ellipsis;
+        }        
+    }*/
+    /*.choix:hover .détail{        
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }*/
     
+       
+
     
-    
-    
-    
-    
+     
     
     
     
