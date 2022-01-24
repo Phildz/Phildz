@@ -505,7 +505,7 @@
     .ligne-prix{
         display: flex;
         justify-content: space-between;
-        align-items: center;        
+        align-items: center;               
     }        
     
     .choix p{
@@ -529,57 +529,80 @@
     /* Animation "Apparition des menus" */
 
 
-    /* Animation "Sélection d'un choix de sous-menu" */
-
+    /*** A N I M A T I O N - CHOIX DE MENU ***/
+    
     .choix{
         position: relative;
+        overflow: hidden;
+        z-index: 0;
     }
     .choix:hover{
         cursor: pointer;        
     } 
 
-        /* Animation GLISSEMENT VOLET SUR LA GAUCHE */
+        /* GLISSEMENT VOLET SUR LA GAUCHE */
+    
     .ligne-prix::before{
-        content: "";
-        width: 20%;
-        height: 100%;
-        border-radius: 0 20px 20px 0;        
-        background: var(--couleur-tertiaire-foncé);        
+        content: '';
         position: absolute;
-        top: 0;
-        right: 0;
-        z-index: -1;        
+        top: 0px;
+        right: -78px;
+        width: 17%;
+        height: 100%;
+        background:var(--couleur-tertiaire);
+        border-radius:0 20% 20% 0;
+        z-index: -1;
+        transition: all 500ms;        
     }    
+    
     .choix:hover > .ligne-prix::before{
-        animation: volet 500ms ease-in;                      
-        display: block;                       
-        z-index: 0;
-    }
-    @keyframes volet {
-        from{
-            width: 0px;
-        }
-        to{
-            width: 70px;
-        }
-    }
+       right: 0px;
+       border-radius: 0;        
+    }   
         
-        /* Animation GLISSEMENT PRIX SUR LA GAUCHE */     
+        /* ROTATION ICONE */
+
+    .ligne-prix::after{
+        content: "\f058";
+        display: inline-block;           
+        color:white;
+        font-family: "Font Awesome 5 Free";            
+        font-weight: bold;
+        font-variant: normal;
+        font-size: 5vw;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;                
+                
+        position: absolute;
+        top: 25px;
+        right: -27px;         
+        
+        transition: all 500ms;
+    }
+    .choix:hover > .ligne-prix::after{
+        right: 27px;
+        transform: rotate(360deg);
+    }  
+        
+        
+        /* GLISSEMENT PRIX A GAUCHE */
+             
     .prix{
-        transition: transform 500ms ease-in;    
+        transition: transform 500ms;    
     }
     .choix:hover .prix{                
         transform: translateX(-15vw);                               
     }
         
-        /* Animation REPLI TEXTE CHOIX */
+        /* REPLI TEXTE CHOIX A GAUCHE */
+
     .détail{               
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
     }
     .choix:hover .détail{
-        animation: repli-texte 500ms ease-in;
+        animation: repli-texte 500ms;
         animation-fill-mode: forwards;
         animation-iteration-count: 1;
     }
@@ -592,14 +615,15 @@
         }
     }
 
-        /* Animation REPLI TITRE CHOIX */
+        /* REPLI TITRE CHOIX A GAUCHE */
+
     .choix h3{        
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;       
     }
     .choix:hover > h3{
-        animation: repli-titre 500ms ease-in;
+        animation: repli-titre 500ms;
         animation-fill-mode: forwards;
         animation-iteration-count: 1;
     }    
@@ -612,24 +636,10 @@
         }
     } 
 
-    
-     
-    /*animation: name duration timing-function delay iteration-count direction fill-mode;*/
-    
-    
-
-
-
-
-
-
-
-
-
-
     /* Au clic sur “Contact”, un renvoi vers une adresse mail est effectué. */
 
-    /* Remplissage du coeur sur hover */
+    
+    /*** A N I M A T I O N - REMPLISSAGE COEUR ***/
        
     /*.fa-heart {
         color: #FFF;
@@ -686,7 +696,8 @@
     }*/
 
 
-    /* Animation "Spinner" */
+    
+    /*** A N I M A T I O N - SPINNER ***/
 
     header, main, footer {
         /*animation: name duration timing-function delay iteration-count direction fill-mode;*/              
