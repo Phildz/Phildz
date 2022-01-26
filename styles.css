@@ -33,11 +33,11 @@
         --couleur-primaire:#9356DC;
         --couleur-secondaire: #FF79DA;
         --couleur-tertiaire: #99E2D0;
-        --couleur-tertiaire-foncé: #00c291;
-        --gris-primaire: rgb(90, 90, 90);
-        --gris-secondaire: rgb(240, 240, 240);
+        --couleur-tertiaire-foncé: rgb(0,135,64);
+        --gris-primaire: rgb(53, 53, 53);
+        --gris-secondaire: rgb(234, 234, 234);
         --gris-sec-clair: rgb(248, 248, 248);
-        --gris-tertiaire: rgb(245, 245, 245);
+        --gris-tertiaire: rgb(246, 246, 246);
     }    
 
     html, body{
@@ -368,7 +368,7 @@
     }    
     
     .icone-fleche{        
-        font-size: 20px; 
+        font-size: 5vw; 
         color: black;     
         position :absolute;
         left: 30px;
@@ -464,12 +464,17 @@
     /*** A N I M A T I O N - EFFETS SUR BOUTONS AU SURVOL ***/
     
     .etape:hover{
+        cursor: pointer;
+        opacity: .8;
         background: var(--gris-sec-clair);
-        box-shadow: 6px 6px 0px var(--gris-secondaire);        
+        -webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 5px 15px 5px rgba(255,121,218,0); 
+        box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 5px 15px 5px rgba(255,121,218,0);       
     }
-    .bouton:hover{        
-        filter: brightness(1.1);
-        box-shadow: 6px 4px 0px var(--couleur-secondaire);
+    .bouton:hover{ 
+        cursor: pointer;
+        opacity: .8;        
+        -webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 5px 15px 5px rgba(255,121,218,0); 
+        box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 5px 15px 5px rgba(255,121,218,0);
     }
     
     /*** A N I M A T I O N - APPARITION PROGRESSIVE MENUS ***/
