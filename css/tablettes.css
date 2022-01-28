@@ -1,6 +1,6 @@
-@media screen and (max-width: 767px)
-{
-    *{box-sizing: border-box; 
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+*{box-sizing: border-box; 
     } /* permet le dimensionnement des boîtes sur le bord externe de la bordure (intégration 
         du padding et de la bordure */
 
@@ -60,7 +60,7 @@
         font-weight: lighter;            
     }
     .accueil h3{
-        font-size: 4vw;
+        /*font-size: 3vw; /**/
     }
     .bouton h3{
         font-size: 4vw;
@@ -71,32 +71,36 @@
         font-size: 7vw;              
     }
     .etape h3{       
-        font-size: 4.4vw; /**/                
+        font-size: 5vw; /**/          
     }
-    .sous-titre h3{        
-        font-size: 6vw;        
+    .sous-titre h3{  /**/      
+        font-size: 3.5vw;        
     }    
-    .restaurant-icone{        
-        font-size: 7vw;
+    .restaurant-icone{  /**/ 
+        font-size: 5vw;
     }
-    .restaurant p{
-        font-size: 4.5vw;
+    .restaurant p{ /**/
+        font-size: 3.5vw;
     }
 
     /* Page Restaurants */
     .page-restaurant h1{
-        font-family: 'shrikhandregular';
+        font-family: "shrikhandregular";
+        font-size: 5vw;
+    }    
+    .page-restaurant-icone{        
+        font-size: 7vw;       
     }
     .page-restaurant h2{
         font-family: "Roboto", Helvetica, Arial, sans-serif;
         font-weight: lighter;
     }
     .page-restaurant h2{
-        font-size: 5vw;
+        font-size: 3vw;/**/
     }
 
 
-    /* PAGE ACCUEIL */
+/* PAGE ACCUEIL */
     /* HEADER */      
 
     .logo{        
@@ -106,7 +110,7 @@
     }    
     .logo img{
         /*margin-left: 17px;*/
-        width: 50%;
+        max-width: 70%; /**/
     }    
     
     
@@ -118,17 +122,19 @@
         align-items: baseline;               
         border-left: none;
         border-right: none;
-        width: 100%;
+        max-width: 44%; /**/
+        margin: 0px auto 20px auto; /**/
+        border-radius: 30px; /**/
         /*height: 72px;*/        
         background: var(--gris-secondaire);
         box-shadow: inset 0px 3px 5px 0px rgb(200, 200, 200);
     }
     .localisation--ville{
         margin: 20px;
-        font-size: 5vw;
+        font-size: 4vw;
     }
-    .icone-map{
-        font-size: 4vw;        
+    .icone-map{        
+        font-size: 4vw; /**/       
     }
     .accueil .titres{
         background: var(--gris-tertiaire);
@@ -173,56 +179,54 @@
         margin-bottom: 40px;
         margin-top: 65px;
     }
-    .bloc-etapes{
+    .bloc-etapes{ /**/
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: flex-start;
-        margin: 0 0 0 40px;
+        align-items: center;
+        margin: 0 0 0 20px;
     }
     .etape{
         display: flex;
-        justify-content: flex-start;
+        justify-content: space-between;/**/
         align-items: center;
         width: 90%;
         height: auto;       
         border-radius: 30px;
-        margin-bottom: 45px;        
+        margin-bottom: 45px;     
         background: var(--gris-tertiaire);
         position: relative;
+        
     }
-    .numberCircle {
+    .numberCircle { /**/
         border-radius: 50%;
-        width: 36px;
-        height: 36px;
-        padding: 5px 0 0 0;
-    
+        width: 7vw;
+        height: 7vw;
+        padding: 12px 0 0 0;
         color: white;
         background: var(--couleur-primaire);
         text-align: center;
-    
-        font: 22px Arial, sans-serif;
-
+        font: 4vw Arial, sans-serif;
         position: absolute;
-        left: -20px;
+        left: -4%;
     }
     .etape-icone{ 
-        width: 40px;
+        width: 10%; /**/
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-left: 35px;
+        margin-left: 60px; /**/
         color: var(--gris-primaire);
     }
     .fa-store{
         color: var(--couleur-primaire);
     }
     .etape h3{        
-        margin: 35px 5px 35px 10px;
-        width: 100%;        
+        margin: 35px 20px 35px 30px; /**/
+        width: 82%;        
     }
     .etape i{
-        font-size: 24px;
+        font-size: 5vw; /**/
     }
 
     /* Section R E S T A U R A N T S */
@@ -237,18 +241,23 @@
         margin: 0 0 0 30px;        
     }
     
-    .bloc-restaurant{
+    .bloc-restaurant{ /**/
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         margin-top: 30px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 33px;
     }    
-    .restaurant-carte{
-        width: 90%;               
+    .restaurant-carte{ /**/
+        width: 45%;
         border-radius: 10px;
         background-color: white;
-        /*position: relative;*/
-        margin-bottom: 20px;               
+        /* position: relative; */
+        margin-bottom: 20px;
+        /* gap: 1px; */
+        height: auto;            
     }
     .restaurant-carte a{
         text-decoration: none;
@@ -264,13 +273,11 @@
         /*display: inline-block;
         overflow: hidden;*/
     }
-    .img-restaurant{
-        /*position: relative;*/
+    .img-restaurant{ /**/
         width: 100%;
-        height: 60vw;
-        
-        object-fit:cover;               
-        border-radius: 10px 10px 0 0 ;
+        height: 31vw;
+        object-fit: cover;
+        border-radius: 10px 10px 0 0;
     }
 
    /*.img-enchantée{
@@ -288,7 +295,7 @@
         left: 74%;
         padding: 7px;
         border-radius: 5%;
-        font-size: 4vw;
+        font-size: 2vw; /**/
         width: 21%;
         color: var(--couleur-tertiaire-foncé);
         background: var(--couleur-tertiaire);
@@ -353,12 +360,12 @@
         margin: 0px 15px 0 0;
     }
 
-    /* LA PALETTE DU GOUT */
+/* LA PALETTE DU GOUT */
     /* HEADER */      
 
     .header-restaurant{
         /*position: relative;*/
-        font-size: 30px;
+        /*font-size: 30px;*/
         display: flex;
         justify-content: center;
         align-items: center;
@@ -375,7 +382,7 @@
     }  
 
     .img-logo-1{        
-        width: 40%;
+        max-width: 40%;
         position :relative;
     }    
     
@@ -393,41 +400,48 @@
     .page-restaurant{
         display: flex;
         flex-direction: column;
-        align-items: center;        
+        align-items: center; 
+        position: relative;       
     }
-    .img-page-restaurant{        
-        width: 100%;
-        height: 60vw;
+    .img-page-restaurant{  /**/      
+        width: 48%;
+        height: 44vw;
         object-fit: cover;
+        position: absolute;
+        top: 1%;
+        right: 0%;
+        z-index: 1;
+        border-radius: 0% 10% 0% 10%;
     }
     .titre-page-restaurant{
         width: 90%;
         text-align: left;
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         align-items: baseline;                     
     }
-    .titre-page-restaurant h1{       
-        margin: 40px 0 0 20px;
-        font-size: 7vw;                
-    }
-    .page-restaurant-icone{        
-        font-size: 7vw;       
-    }
+    .titre-page-restaurant h1{
+        margin: 12px 0 0 20px;                     
+    }    
 
     .menu{
         width: 100%;
         height: auto;
-        margin-top: -50px;
+        margin-top: 10px;
         border-radius: 40px;
         background: var(--gris-tertiaire);
         position: relative;                      
     }
-     .sous-menu{
-        width: auto;
+    .sous-menu{
+        width: 50%;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
+        margin-left: 20px;
+        flex-wrap: wrap;
+    }
+    .sous-menu-plats-desserts{ /**/
+        width: 100%;
     }
     
     .menu h2{
@@ -454,15 +468,23 @@
     
     .choix p{
         margin: 10px 20px 10px 10px;
-        font-size: 4vw;
+        font-size: 1.5vw;
     }
     .choix h3{
         margin: 10px 20px 0px 10px;
-        font-size: 4.5vw;        
+        font-size: 2.5vw;        /**/
     }
     .prix{
         font-weight: bold;
-    }       
+    }     
+    .carte-plats{ /**/
+        width: 50%;
+    }
+    .carte-plats-desserts{ /**/
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
     
     .bouton-commander{
         width: 55%;
@@ -533,7 +555,7 @@
         font-family: "Font Awesome 5 Free";            
         font-weight: bold;
         font-variant: normal;
-        font-size: 5vw;
+        font-size: 3vw; /**/
         text-rendering: auto;
         -webkit-font-smoothing: antialiased;                
                 
@@ -554,7 +576,7 @@
         transition: transform 500ms;    
     }
     .choix:hover .prix{                
-        transform: translateX(-15vw);                               
+        transform: translateX(-6vw);                               
     }
         
         /* REPLI TEXTE CHOIX A GAUCHE */
@@ -619,6 +641,7 @@
         justify-content: center;
         align-items: center;       
         font-size: 7vw;
+        padding-left: 20px;
     }
     .icone-coeur:hover{
         animation: remplissage-coeur 1s ease-in forwards;
@@ -779,4 +802,5 @@
         50% { transform: rotate(-180deg); border-width: 10px; }
         100% { transform: rotate(-360deg); border-width: 1px; }
     }
+    
 }
