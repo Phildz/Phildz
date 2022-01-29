@@ -53,25 +53,25 @@
 
         /* Page Accueil */
     .accueil h1{
-        font-size: 7vw;
+        font-size: 6vw; /**/
     }
     .accueil h2{
-        font-size: 5vw; 
+        font-size: 4vw; /**/
         font-weight: lighter;            
     }
     .accueil h3{
         /*font-size: 3vw; /**/
     }
     .bouton h3{
-        font-size: 4vw;
+        font-size: 3vw;
         font-family: "Roboto", Helvetica, Arial, sans-serif;
         font-weight: lighter;
     }
     .fonctionnement h2, .restaurant h2 {       
-        font-size: 7vw;              
+        font-size: 5vw; /**/ 
     }
     .etape h3{       
-        font-size: 5vw; /**/          
+        font-size: 4.5vw; /**/          
     }
     .sous-titre h3{  /**/      
         font-size: 3.5vw;        
@@ -131,7 +131,7 @@
     }
     .localisation--ville{
         margin: 20px;
-        font-size: 4vw;
+        font-size: 3vw;
     }
     .icone-map{        
         font-size: 4vw; /**/       
@@ -151,7 +151,7 @@
     }
     
     .bouton {
-        width: 60%;
+        width: 45%;
         height: auto;
         display: flex;
         justify-content: center;
@@ -175,7 +175,7 @@
     }
     .fonctionnement h2 {
         margin-left: 25px;
-        font-size: 7vw;
+        /*font-size: 7vw;*/
         margin-bottom: 40px;
         margin-top: 65px;
     }
@@ -323,9 +323,12 @@
 
     /* FOOTER */
     
-    footer{
-        height: 250px;
+    footer{ /**/
+        height: auto;
+        /* min-height: 42%; */
         background: var(--gris-primaire);
+        width: 100%;
+        padding-bottom: 20px;
     }
     .img-logo-footer{
         width: 150px;
@@ -342,7 +345,7 @@
         list-style-type: none;
         text-decoration: none;
         color: white;   
-        font-size: 20px;                     
+        font-size: 2.5vw;     /**/                
     }
        
     .footer-titres1et2{
@@ -382,7 +385,7 @@
     }  
 
     .img-logo-1{        
-        max-width: 40%;
+        max-width: 30%; /**/
         position :relative;
     }    
     
@@ -390,8 +393,8 @@
         font-size: 5vw; 
         color: black;     
         position :absolute;
-        left: 30px;
-        top: 26px;              
+        left: 50px; /**/
+        top: 20px;  /**/        
     }
 
     
@@ -405,19 +408,32 @@
     }
     .img-page-restaurant{  /**/      
         width: 48%;
-        height: 44vw;
+        height: 34vw;
+        max-height: 40vw;
         object-fit: cover;
         position: absolute;
-        top: 1%;
-        right: 0%;
+        top: 13%;
+        right: 2%;
         z-index: 1;
-        border-radius: 0% 10% 0% 10%;
+        border-radius: 10% 10% 10% 10%;
     }
-    .titre-page-restaurant{
-        width: 90%;
+
+    #img-note-enchantée{  /**/
+        width: 48%;
+        height: 43vw;
+        object-fit: cover;
+        position: absolute;
+        top: 12%;
+        right: 2%;
+        z-index: 1;
+        border-radius: 10% 10% 10% 10%;
+    }
+
+    .titre-page-restaurant{ /**/
+        width: 100%;
         text-align: left;
         display: flex;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: baseline;                     
     }
     .titre-page-restaurant h1{
@@ -428,7 +444,7 @@
         width: 100%;
         height: auto;
         margin-top: 10px;
-        border-radius: 40px;
+        border-radius: 40px 40px 0 0; /**/
         background: var(--gris-tertiaire);
         position: relative;                      
     }
@@ -440,18 +456,24 @@
         margin-left: 20px;
         flex-wrap: wrap;
     }
-    .sous-menu-plats-desserts{ /**/
-        width: 100%;
-    }
+    #sous-menu-plats-desserts{ /**/
+        width: 94%;
+    }    
     
     .menu h2{
         text-transform: uppercase;
         margin: 20px 0 5px 20px;
     }
+    .titre-souligné{
+        width: 100%;
+    }
     .soulignage{
         border-top: 5px solid var(--couleur-tertiaire);
-        width: 43px;
+        width: 9%;
         margin: 0 0 20px 20px;
+    }
+    .titre-souligné .soulignage{
+        width: 16%;
     }
     .choix{
         width: 90%;
@@ -460,6 +482,14 @@
         margin: 0px 0 20px 0px;
         font-family: "Roboto", Helvetica, Arial, sans-serif;
     }
+    #choix-plats-dessert{
+        width: 95%;
+        border-radius: 20px;
+        background-color: white;
+        margin: 0px 0 20px 0px;
+        font-family: "Roboto", Helvetica, Arial, sans-serif;
+    }
+
     .ligne-prix{
         display: flex;
         justify-content: space-between;

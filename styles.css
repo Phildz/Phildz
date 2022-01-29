@@ -95,6 +95,10 @@
         font-size: 5vw;
     }
 
+    /* Footer */
+    .footer-donnees a{         
+        font-size: 5vw;                     
+    }
 
     /* PAGE ACCUEIL */
     /* HEADER */      
@@ -316,9 +320,12 @@
 
     /* FOOTER */
     
-    footer{
-        height: 250px;
+    footer{ /**/
+        height: auto;
+    /* min-height: 42%; */
         background: var(--gris-primaire);
+        width: 100%;
+        padding-bottom: 20px;
     }
     .img-logo-footer{
         width: 150px;
@@ -335,7 +342,7 @@
         list-style-type: none;
         text-decoration: none;
         color: white;   
-        font-size: 20px;                     
+        font-size: 2.5vw; /**/                     
     }
        
     .footer-titres1et2{
@@ -436,7 +443,7 @@
     }
     .soulignage{
         border-top: 5px solid var(--couleur-tertiaire);
-        width: 43px;
+        width: 14%;
         margin: 0 0 20px 20px;
     }
     .choix{
