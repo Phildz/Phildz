@@ -1,4 +1,4 @@
-@media screen and (max-width: 767px)
+@media screen and (max-width: 425px)
 {
     *{box-sizing: border-box; 
     } /* permet le dimensionnement des boîtes sur le bord externe de la bordure (intégration 
@@ -53,14 +53,14 @@
 
         /* Page Accueil */
     .accueil h1{
-        font-size: 7vw;
+        font-size: clamp(1.3rem, 2.5vw, 5rem);
     }
     .accueil h2{
         font-size: 5vw; 
         font-weight: lighter;            
     }
     .accueil h3{
-        font-size: 4vw;
+        font-size: clamp(1rem, 1.4vw, 5rem);
     }
     .bouton h3{
         font-size: 4vw;
@@ -74,7 +74,7 @@
         font-size: 4.4vw; /**/                
     }
     .sous-titre h3{        
-        font-size: 6vw;        
+        font-size: clamp(1.3rem, 4vw, 5rem);       
     }    
     .restaurant-icone{        
         font-size: 7vw;
@@ -96,9 +96,7 @@
     }
 
     /* Footer */
-    .footer-donnees a{         
-        font-size: 5vw;                     
-    }
+    
 
     /* PAGE ACCUEIL */
     /* HEADER */      
@@ -108,9 +106,11 @@
         width: 100%;
         text-align:center;                                      
     }    
-    .logo img{
-        /*margin-left: 17px;*/
+    .logo img {
+        /* margin-left: 17px; */
         width: 50%;
+        max-width: 250px;
+        width: 45%;
     }    
     
     
@@ -127,19 +127,20 @@
         background: var(--gris-secondaire);
         box-shadow: inset 0px 3px 5px 0px rgb(200, 200, 200);
     }
-    .localisation--ville{
-        margin: 20px;
-        font-size: 5vw;
+    .localisation--ville {
+        margin: 20px 0px 20px 4%;
     }
-    .icone-map{
-        font-size: 4vw;        
+
+    .icone-map {
+    font-size: clamp(1rem, 1.4vw, 5rem);
+    margin-left: -4%;
     }
-    .accueil .titres{
+    .accueil .titres {
         background: var(--gris-tertiaire);
-        margin: auto;        
-        padding-top: 50px;
-        padding-bottom: 20px;
-        width:100%;
+        margin: auto;
+        padding-top: 40px;
+        padding-bottom: 12px;
+        width: 100%;
     }
     .titres__n1, .titres__n2{
         text-align: center;        
@@ -153,11 +154,11 @@
         height: auto;
         display: flex;
         justify-content: center;
-        margin: 50px auto;
+        margin: 35px auto;
         border: none;
         border-radius: 50px;
         color: white;
-        padding:20px;
+        padding:15px;
         background: linear-gradient(to bottom, #FF79DA, #9356DC);
     }
     .bouton h3{
@@ -174,8 +175,8 @@
     .fonctionnement h2 {
         margin-left: 25px;
         font-size: 7vw;
-        margin-bottom: 40px;
-        margin-top: 65px;
+        margin-bottom: 28px;
+        margin-top: 50px;
     }
     .bloc-etapes{
         display: flex;
@@ -277,6 +278,13 @@
         border-radius: 10px 10px 0 0 ;
     }
 
+    .img-note-enchantée{ /**/
+        width: 100%;
+        height: 60vw;
+        object-fit: cover;
+        border-radius: 10px 10px 0 0;
+    }
+
    /*.img-enchantée{
         clip-path: polygon(0% 20%, 100% 20%, 100% 120%, 0% 120%);
         width: 100%;
@@ -288,16 +296,15 @@
 
     .textover figcaption {
         position: absolute;
-        top: 11%;
+        top: 5%;
         left: 74%;
         padding: 7px;
         border-radius: 5%;
         font-size: 4vw;
-        width: 21%;
+        width: 22%;
         color: var(--couleur-tertiaire-foncé);
         background: var(--couleur-tertiaire);
-        
-    }   
+    }
     
     .sous-titre{
         display: flex;
@@ -342,7 +349,7 @@
         list-style-type: none;
         text-decoration: none;
         color: white;   
-        font-size: 2.5vw; /**/                     
+        font-size: 4.5vw; /**/                     
     }
        
     .footer-titres1et2{

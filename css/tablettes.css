@@ -1,4 +1,4 @@
-@media screen and (min-width: 768px) and (max-width: 991px) {
+@media screen and (min-width: 426px) and (max-width: 768px) {
 
 *{box-sizing: border-box; 
     } /* permet le dimensionnement des boîtes sur le bord externe de la bordure (intégration 
@@ -52,18 +52,21 @@
         /* POLICES */
 
         /* Page Accueil */
-    .accueil h1{
-        font-size: 6vw; /**/
+    .accueil h1 {        
+        max-width: 37%;
+        min-width: 30%;
+        font-size: clamp(1.3rem, 3vw, 5rem);
+        margin: 0 auto;
     }
     .accueil h2{
-        font-size: 4vw; /**/
+        font-size: clamp(1.3rem, 2.5vw, 5rem); /**/
         font-weight: lighter;            
     }
     .accueil h3{
         /*font-size: 3vw; /**/
     }
     .bouton h3{
-        font-size: 3vw;
+        font-size: clamp(1rem, 1.4vw, 5rem);
         font-family: "Roboto", Helvetica, Arial, sans-serif;
         font-weight: lighter;
     }
@@ -74,13 +77,13 @@
         font-size: 4.5vw; /**/          
     }
     .sous-titre h3{  /**/      
-        font-size: 3.5vw;        
+        font-size: clamp(1.3rem, 4.9vw, 5rem);       
     }    
     .restaurant-icone{  /**/ 
-        font-size: 5vw;
+        font-size: 7vw;
     }
     .restaurant p{ /**/
-        font-size: 3.5vw;
+        font-size: clamp(1.3rem, 4.5vw, 5rem);
     }
 
     /* Page Restaurants */
@@ -108,10 +111,12 @@
         width: 100%;
         text-align:center;                                      
     }    
-    .logo img{
-        /*margin-left: 17px;*/
-        max-width: 70%; /**/
-    }    
+    .logo img {
+        /* margin-left: 17px; */
+        max-width: 250px;
+        width: 45%;
+        min-width: 216px;
+    } 
     
     
     /* MAIN */  
@@ -122,19 +127,19 @@
         align-items: baseline;               
         border-left: none;
         border-right: none;
-        max-width: 44%; /**/
-        margin: 0px auto 20px auto; /**/
-        border-radius: 30px; /**/
+        width: 100%; /**/
+        margin: 0 auto; /**/
+        
         /*height: 72px;*/        
         background: var(--gris-secondaire);
         box-shadow: inset 0px 3px 5px 0px rgb(200, 200, 200);
     }
     .localisation--ville{
         margin: 20px;
-        font-size: 3vw;
+        font-size: clamp(1rem, 1.4vw, 5rem);
     }
     .icone-map{        
-        font-size: 4vw; /**/       
+        font-size: clamp(1rem, 1.4vw, 5rem); /**/       
     }
     .accueil .titres{
         background: var(--gris-tertiaire);
@@ -151,7 +156,7 @@
     }
     
     .bouton {
-        width: 45%;
+        max-width: 230px;
         height: auto;
         display: flex;
         justify-content: center;
@@ -196,6 +201,7 @@
         margin-bottom: 45px;     
         background: var(--gris-tertiaire);
         position: relative;
+        /*flex-wrap: wrap;*/
         
     }
     .numberCircle { /**/
@@ -251,7 +257,7 @@
         gap: 33px;
     }    
     .restaurant-carte{ /**/
-        width: 45%;
+        width: 90%;
         border-radius: 10px;
         background-color: white;
         /* position: relative; */
@@ -275,7 +281,14 @@
     }
     .img-restaurant{ /**/
         width: 100%;
-        height: 31vw;
+        height: auto;
+        object-fit: cover;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .img-note-enchantée{ /**/
+        width: 100%;
+        height: 60vw;
         object-fit: cover;
         border-radius: 10px 10px 0 0;
     }
@@ -291,16 +304,15 @@
 
     .textover figcaption {
         position: absolute;
-        top: 11%;
+        top: 5%;
         left: 74%;
         padding: 7px;
         border-radius: 5%;
-        font-size: 2vw; /**/
-        width: 21%;
+        font-size: 4vw;
+        width: 22%;
         color: var(--couleur-tertiaire-foncé);
         background: var(--couleur-tertiaire);
-        
-    }   
+    }
     
     .sous-titre{
         display: flex;
@@ -330,12 +342,13 @@
         width: 100%;
         padding-bottom: 20px;
     }
-    .img-logo-footer{
-        width: 150px;
+    .img-logo-footer {
+        width: 13vw;
         height: auto;
         margin-left: 35px;
-        margin-top: 30px;       
-        filter:invert(100%);
+        margin-top: 30px;
+        filter: invert(100%);
+        min-width: 150px;
     }
     
     .footer-donnees li{        
@@ -418,7 +431,7 @@
         border-radius: 10% 10% 10% 10%;
     }
 
-    #img-note-enchantée{  /**/
+    #img-pagerest-note-enchantée{  /**/
         width: 48%;
         height: 43vw;
         object-fit: cover;
