@@ -441,25 +441,26 @@
         }
         .img-page-restaurant{  /**/      
             width: 48%;
-            height: 34vw;
+            height: 31%;
             max-height: 40vw;
             object-fit: cover;
             position: absolute;
-            top: 13%;
+            top: 15%;
             right: 2%;
             z-index: 1;
             border-radius: 10% 10% 10% 10%;
         }
     
-        #img-note-enchantée{  /**/
+        #img-pagerest-note-enchantée {
             width: 48%;
-            height: 43vw;
+            height: 31%;
             object-fit: cover;
             position: absolute;
-            top: 12%;
+            top: 15%;
             right: 2%;
             z-index: 1;
             border-radius: 10% 10% 10% 10%;
+            
         }
     
         .titre-page-restaurant{ /**/
@@ -508,19 +509,21 @@
         .titre-souligné .soulignage{
             width: 16%;
         }
-        .choix{
+        .choix {
+            width: 85%;
+            border-radius: 20px;
+            background-color: white;
+            margin: 0px 0 20px 0px;
+            font-family: "Roboto", Helvetica, Arial, sans-serif;
+            /*height: 8.5vw;*/
+        }
+        #choix-plats-dessert {
             width: 90%;
             border-radius: 20px;
             background-color: white;
             margin: 0px 0 20px 0px;
             font-family: "Roboto", Helvetica, Arial, sans-serif;
-        }
-        #choix-plats-dessert{
-            width: 95%;
-            border-radius: 20px;
-            background-color: white;
-            margin: 0px 0 20px 0px;
-            font-family: "Roboto", Helvetica, Arial, sans-serif;
+            /*height: 8.5vw;*/
         }
     
         .ligne-prix{
@@ -529,13 +532,13 @@
             align-items: center;               
         }        
         
-        .choix p{
-            margin: 10px 20px 10px 10px;
-            font-size: 1.5vw;
+        .choix p {
+            margin: 10px 20px 10px 10px;            
+            font-size: clamp(.4rem, 1.55vw, 5rem);
         }
-        .choix h3{
-            margin: 10px 20px 0px 10px;
-            font-size: 2.5vw;        /**/
+        .choix h3 {
+            margin: 10px 20px 0px 10px;                       
+            font-size: clamp(.5rem, 1.95vw, 5rem);
         }
         .prix{
             font-weight: bold;
@@ -547,10 +550,14 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            
+            
         }
         
-        .bouton-commander{
-            width: 55%;
+        .bouton-commander {
+            /* width: 32%; */
+            min-width: 160px;
+            max-width: 400px;
         }
         
         /* FOOTER --> Idem page d"accueil */
@@ -611,22 +618,21 @@
             
             /* ROTATION ICONE */
     
-        .ligne-prix::after{
+        .ligne-prix::after {
             content: "\f058";
-            display: inline-block;           
-            color:white;
-            font-family: "Font Awesome 5 Free";            
+            display: inline-block;
+            color: white;
+            font-family: "Font Awesome 5 Free";
             font-weight: bold;
             font-variant: normal;
-            font-size: 3vw; /**/
+            font-size: 3vw;
             text-rendering: auto;
-            -webkit-font-smoothing: antialiased;                
-                    
+            -webkit-font-smoothing: antialiased;
             position: absolute;
-            top: 33%;
-            right: -7%;         
-            
+            top: 29%;
+            right: -7%;
             transition: all 500ms;
+            /* transform: translate(-50%, -50%); */
         }
         .choix:hover > .ligne-prix::after{
             right: 6%;
@@ -639,7 +645,7 @@
             transition: transform 500ms;    
         }
         .choix:hover .prix{                
-            transform: translateX(-6vw);                               
+            transform: translateX(-7vw);                               
         }
             
             /* REPLI TEXTE CHOIX A GAUCHE */

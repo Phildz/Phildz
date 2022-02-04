@@ -1,0 +1,16 @@
+@media screen and (min-width: 576px)
+{
+    *{box-sizing: border-box; 
+    }
+    .bloc-restaurant {
+        display: flex;
+        justify-content: space-around;               
+        align-items: center;
+        flex-wrap: wrap;
+       
+    }
+    .restaurant-carte {
+        width: 45%;        
+    }
+
+}

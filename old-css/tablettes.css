@@ -1,6 +1,6 @@
-@media screen and (max-width: 425px)
-{
-    *{box-sizing: border-box; 
+@media screen and (min-width: 426px) and (max-width: 768px) {
+
+*{box-sizing: border-box; 
     } /* permet le dimensionnement des boîtes sur le bord externe de la bordure (intégration 
         du padding et de la bordure */
 
@@ -46,59 +46,68 @@
         margin: 0px;
         padding: 0px;
         /*font-family: 'shrikhandregular';*/
-        font-family: "Roboto", Helvetica, Arial, sans-serif;       
+        font-family: "Roboto", Helvetica, Arial, sans-serif;   
     }    
     
         /* POLICES */
 
         /* Page Accueil */
-    .accueil h1{
-        font-size: clamp(1.3rem, 2.5vw, 5rem);
+    .accueil h1 {        
+        max-width: 37%;
+        min-width: 30%;
+        font-size: clamp(1.3rem, 3vw, 5rem);
+        margin: 0 auto;
     }
     .accueil h2{
-        font-size: 5vw; 
+        font-size: clamp(1.3rem, 2.5vw, 5rem); /**/
         font-weight: lighter;            
     }
     .accueil h3{
-        font-size: clamp(1rem, 1.4vw, 5rem);
+        /*font-size: 3vw; /**/
     }
-    .bouton h3{
-        font-size: 4vw;
+    .bouton h3 {
+        font-size: clamp(.7rem, 2vw, 5rem);
         font-family: "Roboto", Helvetica, Arial, sans-serif;
         font-weight: lighter;
+        /* font-size: clamp(.9rem, 1.4vw, 5rem); */
     }
     .fonctionnement h2, .restaurant h2 {       
-        font-size: 7vw;              
+        font-size: 5vw; /**/ 
     }
     .etape h3{       
-        font-size: 4.4vw; /**/                
+        font-size: 4.5vw; /**/          
     }
-    .sous-titre h3{        
-        font-size: clamp(1.3rem, 4vw, 5rem);       
+    .sous-titre h3{  /**/      
+        font-size: clamp(1.3rem, 4.9vw, 5rem);       
     }    
-    .restaurant-icone{        
+    .restaurant-icone{  /**/ 
         font-size: 7vw;
     }
-    .restaurant p{
-        font-size: 4.5vw;
+    .restaurant p{ /**/
+        font-size: clamp(1.3rem, 4.5vw, 5rem);
     }
 
     /* Page Restaurants */
+    #titre-pagerest{
+        font-family: "shrikhandregular";
+    }
     .page-restaurant h1{
-        font-family: 'shrikhandregular';
+        font-family: "shrikhandregular";
+        font-size: 5vw;
+    }    
+    .page-restaurant-icone{        
+        font-size: 7vw;       
     }
     .page-restaurant h2{
         font-family: "Roboto", Helvetica, Arial, sans-serif;
         font-weight: lighter;
     }
     .page-restaurant h2{
-        font-size: 5vw;
+        font-size: 3vw;/**/
     }
 
-    /* Footer */
-    
 
-    /* PAGE ACCUEIL */
+/* PAGE ACCUEIL */
     /* HEADER */      
 
     .logo{        
@@ -108,10 +117,10 @@
     }    
     .logo img {
         /* margin-left: 17px; */
-        width: 50%;
         max-width: 250px;
         width: 45%;
-    }    
+        min-width: 216px;
+    } 
     
     
     /* MAIN */  
@@ -122,25 +131,26 @@
         align-items: baseline;               
         border-left: none;
         border-right: none;
-        width: 100%;
+        width: 100%; /**/
+        margin: 0 auto; /**/
+        
         /*height: 72px;*/        
         background: var(--gris-secondaire);
         box-shadow: inset 0px 3px 5px 0px rgb(200, 200, 200);
     }
-    .localisation--ville {
-        margin: 20px 0px 20px 4%;
+    .localisation--ville{
+        margin: 20px;
+        font-size: clamp(1rem, 1.4vw, 5rem);
     }
-
-    .icone-map {
-    font-size: clamp(1rem, 1.4vw, 5rem);
-    margin-left: -4%;
+    .icone-map{        
+        font-size: clamp(1rem, 1.4vw, 5rem); /**/       
     }
-    .accueil .titres {
+    .accueil .titres{
         background: var(--gris-tertiaire);
-        margin: auto;
-        padding-top: 40px;
-        padding-bottom: 12px;
-        width: 100%;
+        margin: auto;        
+        padding-top: 50px;
+        padding-bottom: 20px;
+        width:100%;
     }
     .titres__n1, .titres__n2{
         text-align: center;        
@@ -150,15 +160,15 @@
     }
     
     .bouton {
-        width: 60%;
+        max-width: 202px;
         height: auto;
         display: flex;
         justify-content: center;
-        margin: 35px auto;
+        margin: 50px auto;
         border: none;
         border-radius: 50px;
         color: white;
-        padding:15px;
+        padding: 15px;
         background: linear-gradient(to bottom, #FF79DA, #9356DC);
     }
     .bouton h3{
@@ -174,60 +184,59 @@
     }
     .fonctionnement h2 {
         margin-left: 25px;
-        font-size: 7vw;
-        margin-bottom: 28px;
-        margin-top: 50px;
+        /*font-size: 7vw;*/
+        margin-bottom: 40px;
+        margin-top: 65px;
     }
-    .bloc-etapes{
+    .bloc-etapes{ /**/
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: flex-start;
-        margin: 0 0 0 40px;
+        align-items: center;
+        margin: 0 0 0 20px;
     }
     .etape{
         display: flex;
-        justify-content: flex-start;
+        justify-content: space-between;/**/
         align-items: center;
         width: 90%;
         height: auto;       
         border-radius: 30px;
-        margin-bottom: 45px;        
+        margin-bottom: 45px;     
         background: var(--gris-tertiaire);
         position: relative;
+        /*flex-wrap: wrap;*/
+        
     }
-    .numberCircle {
+    .numberCircle { /**/
         border-radius: 50%;
-        width: 36px;
-        height: 36px;
-        padding: 5px 0 0 0;
-    
+        width: 7vw;
+        height: 7vw;
+        padding: 12px 0 0 0;
         color: white;
         background: var(--couleur-primaire);
         text-align: center;
-    
-        font: 22px Arial, sans-serif;
-
+        font: 4vw Arial, sans-serif;
         position: absolute;
-        left: -20px;
+        left: -4%;
     }
     .etape-icone{ 
-        width: 40px;
+        width: 10%; /**/
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-left: 35px;
+        margin-left: 60px; /**/
         color: var(--gris-primaire);
     }
     .fa-store{
         color: var(--couleur-primaire);
     }
     .etape h3{        
-        margin: 35px 5px 35px 10px;
-        width: 100%;        
+        margin: 35px 20px 35px 30px; /**/
+        width: 82%;        
     }
     .etape i{
-        font-size: 24px;
+        font-size: 5vw; /**/
     }
 
     /* Section R E S T A U R A N T S */
@@ -242,18 +251,23 @@
         margin: 0 0 0 30px;        
     }
     
-    .bloc-restaurant{
+    .bloc-restaurant{ /**/
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         margin-top: 30px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 33px;
     }    
-    .restaurant-carte{
-        width: 90%;               
+    .restaurant-carte{ /**/
+        width: 90%;
         border-radius: 10px;
         background-color: white;
-        /*position: relative;*/
-        margin-bottom: 20px;               
+        /* position: relative; */
+        margin-bottom: 20px;
+        /* gap: 1px; */
+        height: auto;            
     }
     .restaurant-carte a{
         text-decoration: none;
@@ -269,13 +283,11 @@
         /*display: inline-block;
         overflow: hidden;*/
     }
-    .img-restaurant{
-        /*position: relative;*/
+    .img-restaurant{ /**/
         width: 100%;
-        height: 60vw;
-        
-        object-fit:cover;               
-        border-radius: 10px 10px 0 0 ;
+        height: auto;
+        object-fit: cover;
+        border-radius: 10px 10px 0 0;
     }
 
     .img-note-enchantée{ /**/
@@ -329,17 +341,18 @@
     
     footer{ /**/
         height: auto;
-    /* min-height: 42%; */
+        /* min-height: 42%; */
         background: var(--gris-primaire);
         width: 100%;
         padding-bottom: 20px;
     }
-    .img-logo-footer{
-        width: 150px;
+    .img-logo-footer {
+        width: 13vw;
         height: auto;
         margin-left: 35px;
-        margin-top: 30px;       
-        filter:invert(100%);
+        margin-top: 30px;
+        filter: invert(100%);
+        min-width: 150px;
     }
     
     .footer-donnees li{        
@@ -349,7 +362,7 @@
         list-style-type: none;
         text-decoration: none;
         color: white;   
-        font-size: 4.5vw; /**/                     
+        font-size: 2.5vw;     /**/                
     }
        
     .footer-titres1et2{
@@ -367,12 +380,12 @@
         margin: 0px 15px 0 0;
     }
 
-    /* LA PALETTE DU GOUT */
+/* LA PALETTE DU GOUT */
     /* HEADER */      
 
     .header-restaurant{
         /*position: relative;*/
-        font-size: 30px;
+        /*font-size: 30px;*/
         display: flex;
         justify-content: center;
         align-items: center;
@@ -389,7 +402,7 @@
     }  
 
     .img-logo-1{        
-        width: 40%;
+        max-width: 30%; /**/
         position :relative;
     }    
     
@@ -397,8 +410,8 @@
         font-size: 5vw; 
         color: black;     
         position :absolute;
-        left: 30px;
-        top: 26px;              
+        left: 50px; /**/
+        top: 20px;  /**/        
     }
 
     
@@ -407,79 +420,128 @@
     .page-restaurant{
         display: flex;
         flex-direction: column;
-        align-items: center;        
+        align-items: center; 
+        position: relative;       
     }
-    .img-page-restaurant{        
-        width: 100%;
-        height: 60vw;
+    .img-page-restaurant{  /**/      
+        width: 48%;
+        height: 31%;
+        max-height: 40vw;
         object-fit: cover;
+        position: absolute;
+        top: 15%;
+        right: 2%;
+        z-index: 1;
+        border-radius: 10% 10% 10% 10%;
     }
-    .titre-page-restaurant{
-        width: 90%;
+
+    #img-pagerest-note-enchantée {
+        width: 48%;
+        height: 31%;
+        object-fit: cover;
+        position: absolute;
+        top: 15%;
+        right: 2%;
+        z-index: 1;
+        border-radius: 10% 10% 10% 10%;
+        min-height: 246px;
+        
+    }
+
+    .titre-page-restaurant{ /**/
+        width: 100%;
         text-align: left;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: baseline;                     
     }
-    .titre-page-restaurant h1{       
-        margin: 40px 0 0 20px;
-        font-size: 7vw;                
-    }
-    .page-restaurant-icone{        
-        font-size: 7vw;       
-    }
+    .page-restaurant h1{
+        margin: 12px 0 0 20px;                     
+    }    
 
     .menu{
         width: 100%;
         height: auto;
-        margin-top: -50px;
-        border-radius: 40px;
+        margin-top: 10px;
+        border-radius: 40px 40px 0 0; /**/
         background: var(--gris-tertiaire);
         position: relative;                      
     }
-     .sous-menu{
-        width: auto;
+    .sous-menu{
+        width: 50%;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
+        margin-left: 20px;
+        flex-wrap: wrap;
     }
+    #sous-menu-plats-desserts{ /**/
+        width: 94%;
+    }    
     
     .menu h2{
         text-transform: uppercase;
         margin: 20px 0 5px 20px;
     }
+    .titre-souligné{
+        width: 100%;
+    }
     .soulignage{
         border-top: 5px solid var(--couleur-tertiaire);
-        width: 14%;
+        width: 9%;
         margin: 0 0 20px 20px;
     }
-    .choix{
+    .titre-souligné .soulignage{
+        width: 16%;
+    }
+    .choix {
+        width: 85%;
+        border-radius: 20px;
+        background-color: white;
+        margin: 0px 0 20px 0px;
+        font-family: "Roboto", Helvetica, Arial, sans-serif;
+        /*height: 8.5vw;*/
+    }
+    #choix-plats-dessert {
         width: 90%;
         border-radius: 20px;
         background-color: white;
         margin: 0px 0 20px 0px;
         font-family: "Roboto", Helvetica, Arial, sans-serif;
+        /*height: 8.5vw;*/
     }
+
     .ligne-prix{
         display: flex;
         justify-content: space-between;
         align-items: center;               
     }        
     
-    .choix p{
+    .choix p {
         margin: 10px 20px 10px 10px;
-        font-size: 4vw;
+        font-size: clamp(.4rem, 1.55vw, 5rem);
     }
-    .choix h3{
+    .choix h3 {
         margin: 10px 20px 0px 10px;
-        font-size: 4.5vw;        
+        font-size: clamp(.5rem, 1.95vw, 5rem);
     }
     .prix{
         font-weight: bold;
-    }       
+    }     
+    .carte-plats{ /**/
+        width: 50%;
+    }
+    .carte-plats-desserts{ /**/
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
     
-    .bouton-commander{
-        width: 55%;
+    .bouton-commander {
+        /* width: 30%; */
+        max-width: 160px;
+        min-width: 140px;
     }
     
     /* FOOTER --> Idem page d"accueil */
@@ -540,21 +602,19 @@
         
         /* ROTATION ICONE */
 
-    .ligne-prix::after{
+    .ligne-prix::after {
         content: "\f058";
-        display: inline-block;           
-        color:white;
-        font-family: "Font Awesome 5 Free";            
+        display: inline-block;
+        color: white;
+        font-family: "Font Awesome 5 Free";
         font-weight: bold;
         font-variant: normal;
-        font-size: 5vw;
+        font-size: 3vw;
         text-rendering: auto;
-        -webkit-font-smoothing: antialiased;                
-                
+        -webkit-font-smoothing: antialiased;
         position: absolute;
-        top: 33%;
-        right: -7%;         
-        
+        top: 31%;
+        right: -7%;
         transition: all 500ms;
     }
     .choix:hover > .ligne-prix::after{
@@ -568,7 +628,7 @@
         transition: transform 500ms;    
     }
     .choix:hover .prix{                
-        transform: translateX(-15vw);                               
+        transform: translateX(-6vw);                               
     }
         
         /* REPLI TEXTE CHOIX A GAUCHE */
@@ -633,6 +693,7 @@
         justify-content: center;
         align-items: center;       
         font-size: 7vw;
+        padding-left: 20px;
     }
     .icone-coeur:hover{
         animation: remplissage-coeur 1s ease-in forwards;
@@ -793,4 +854,5 @@
         50% { transform: rotate(-180deg); border-width: 10px; }
         100% { transform: rotate(-360deg); border-width: 1px; }
     }
+    
 }

@@ -6,14 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="css/normalize.css">
         
-        <!-- Pour toutes résolutions R >= 992 pixels -->
-        <link rel="stylesheet" type="text/css" href="">
-
-        <!-- Pour une résolution : 992 pixels > R >= 768 pixels -->
-		<link rel="stylesheet" media="screen and (min-width: 768px) and (max-width: 991px)" href="css\tablettes.css"/>
-
-        <!-- Pour une résolution : R < 768 pixels -->
-        <link rel="stylesheet" type="text/css" href="styles.css">
+		<link rel="stylesheet" type="text/css" href="style.css">
 
         <script src="https://kit.fontawesome.com/579348ba25.js" crossorigin="anonymous"></script>
     </head>
@@ -32,10 +25,10 @@
             <img class="img-page-restaurant" src="images\restaurants\jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="la palette du goût" />
 
             <div class="menu">
-                <div class="titre-page-restaurant">
+                <div class="titre-page-restaurant" id="titre-pagerest">
                     <h1>La palette du goût</h1>
                     <div class="icone-coeur">
-                        <i class="restaurant-icone far fa-heart"></i>	
+                        <i class="page-restaurant-icone far fa-heart"></i>	
                     </div>
                 </div>
                 
@@ -87,7 +80,7 @@
                             <div class="choix" id="choix-plats-dessert">
                                 <h3>Filet de boeuf aux herbes</h3>
                                 <div class="ligne-prix">
-                                    <p class="détail">Accopagné de sa ribambelle de légumes</p>
+                                    <p class="détail">Accompagné de sa ribambelle de légumes</p>
                                     <p class="prix">40€</p>
                                 </div>
                             </div>
@@ -146,7 +139,7 @@
                 </div>
                 
                 <div class="bouton-commander-icone"></div>
-                    <div class="bouton bouton-commander">
+                    <div class="bouton-commander">
                         <h3 class="titres__n3 ">Commander</h3>
                     </div>                    
                 </div>             
