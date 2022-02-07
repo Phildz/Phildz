@@ -116,6 +116,14 @@ html, body{
     background: linear-gradient(to bottom, #FF79DA, #9356DC);
     max-width: 190px;
     min-width: 160px;
+    
+    /*-webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);**/
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow opacity;
+    transition-property: box-shadow opacity;
 }
 .bouton-commander h3{
     margin: auto;
@@ -123,8 +131,11 @@ html, body{
 }
 
 /* Footer */
+.footer-donnees{
+    padding-left: 20px;
+}
 .footer-donnees a{
-    font-size:clamp(14px, 1.7vw, 20px);
+    font-size:clamp(12px, 1.7vw, 16px);    
 }
 
 /* PAGE ACCUEIL */
@@ -190,7 +201,18 @@ html, body{
     background: linear-gradient(to bottom, #FF79DA, #9356DC);
     max-width: 300px;
     min-width: 165px;
+
+    /*-webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);*/
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow opacity;
+    transition-property: box-shadow opacity;
 }
+
+
+
 .bouton h3{
     margin: auto;
     text-align: center;
@@ -225,6 +247,14 @@ html, body{
     margin-bottom: 15px;
     background: var(--gris-tertiaire);
     position: relative;
+
+    /*-webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);*/
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow opacity;
+    transition-property: box-shadow opacity;
 }
 .numberCircle {
     border-radius: 50%;
@@ -350,7 +380,7 @@ footer{
     margin-left: 20px;
     margin-top: 20px;
     filter: invert(100%);
-    width: clamp(100px, 25%, 200px);
+    width: clamp(84px, 12%, 110px);
 }
 
 .footer-donnees li{
@@ -506,15 +536,16 @@ footer{
 .etape:hover{
     cursor: pointer;
     opacity: .8;
-    background: var(--gris-sec-clair);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+    
+    /*background: var(--gris-sec-clair);
     -webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 5px 15px 5px rgba(255,121,218,0); 
-    box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 5px 15px 5px rgba(255,121,218,0);       
+    box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 5px 15px 5px rgba(255,121,218,0);*/       
 }
 .bouton:hover, .bouton-commander:hover{ 
     cursor: pointer;
-    opacity: .8;        
-    -webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 5px 15px 5px rgba(255,121,218,0); 
-    box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 5px 15px 5px rgba(255,121,218,0);
+    opacity:.8;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
 }
 
 /*** A N I M A T I O N - CHOIX DE MENU ***/
@@ -1088,41 +1119,16 @@ footer{
 /*** A N I M A T I O N - SPINNER ***/
 
 header, main, footer {
-    animation: apparition-fondu ease-in 6s;               
+    opacity: 0;
+    animation: apparition-fondu ease-in 1.3s;
+    animation-delay: 2.3s;             
     animation-fill-mode: forwards; 
     animation-iteration-count: 1; 
 }    
 @keyframes apparition-fondu {
     0% {        
         opacity: 0; 
-    }
-    10%{
-        opacity: 0;
-    }
-    20%{
-        opacity: 0;
-    }
-    30%{
-        opacity: 0.3;
-    }
-    40%{
-        opacity: 0.4;
-    }
-    50%{
-        opacity: 0.5;
-    }
-    60%{
-        opacity: 0.6;
-    }
-    70%{
-        opacity: 0.7;
-    }
-    80% { 
-        opacity: 0.8; 
-    }
-    90% { 
-        opacity: 0.9; 
-    }
+    }    
     100% { 
         opacity: 1; 
     }        
@@ -1135,7 +1141,7 @@ header, main, footer {
     align-items: center;        
     
     animation-delay: 0s;
-    animation: disparition-fondu linear 2s; 
+    animation: disparition-fondu ease-out 7s; 
     animation-fill-mode: forwards; 
     animation-iteration-count: 1;   
 }
