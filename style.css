@@ -41,9 +41,9 @@ html, body{
     font-family: "Roboto", Helvetica, Arial, sans-serif;       
 }    
 
-/* POLICES */
+/* POLICES TEXTES */
 
-    /* Page Accueil */
+    /* PAGE ACCUEIL  */
 .accueil h1{
     font-size: clamp(25px, 1.7vw, 25px);
     width: 80%;
@@ -85,7 +85,7 @@ html, body{
 }
 
 
-/* Page Restaurants */
+/* PAGE RESTAURANTS */
 .page-restaurant h1{
     font-family: 'shrikhandregular';
 }
@@ -117,26 +117,26 @@ html, body{
     max-width: 190px;
     min-width: 160px;
     
-    /*-webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);**/
+    
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
-    -webkit-transition-property: box-shadow opacity;
-    transition-property: box-shadow opacity;
+    -webkit-transition-property: box-shadow, opacity;
+    transition-property: box-shadow, opacity;
 }
+
 .bouton-commander h3{
     margin: auto;
     text-align: center;
 }
 
-/* Footer */
+/* FOOTER */
 .footer-donnees{
     padding-left: 20px;
 }
 .footer-donnees a{
     font-size:clamp(12px, 1.7vw, 16px);    
 }
+
 
 /* PAGE ACCUEIL */
     /* HEADER */      
@@ -202,16 +202,13 @@ html, body{
     max-width: 300px;
     min-width: 165px;
 
-    /*-webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);*/
+    
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
-    -webkit-transition-property: box-shadow opacity;
-    transition-property: box-shadow opacity;
+    -webkit-transition-property: box-shadow, opacity;
+    transition-property: box-shadow, opacity;
 }
-
-
 
 .bouton h3{
     margin: auto;
@@ -248,13 +245,11 @@ html, body{
     background: var(--gris-tertiaire);
     position: relative;
 
-    /*-webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);*/
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
-    -webkit-transition-property: box-shadow opacity;
-    transition-property: box-shadow opacity;
+    -webkit-transition-property: box-shadow, opacity;
+    transition-property: box-shadow, opacity;
 }
 .numberCircle {
     border-radius: 50%;
@@ -372,7 +367,7 @@ footer{
     height: auto;    
     background: var(--gris-primaire);
     width: 100%;
-    padding-bottom: 10px;
+    padding-bottom: 10px;    
 }
 .img-logo-footer {
     width: 27%;
@@ -385,17 +380,22 @@ footer{
 
 .footer-donnees li{
     margin: 0 0 10px 0;
+    list-style-type: none;
+    text-decoration: none;     
 } 
 .footer-donnees a{
     list-style-type: none;
     text-decoration: none;
-    color: white;    
+    color: white;
 }
     
-.footer-titres1et2{
+.footer-titres1et2 a{
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: center;   
+}
+.footer-titres1et2 p{
+    margin: 0;
 }
 .footer-titres3et4{
     margin-left: 0px;
@@ -407,8 +407,8 @@ footer{
     margin: 0px 5px 0 0;
 }
 
-/* LA PALETTE DU GOUT */
-    /* HEADER */      
+/* PAGE RESTAURANTS */
+    /* HEADER */           
 
 .header-restaurant{   
     font-size: 30px;
@@ -536,11 +536,7 @@ footer{
 .etape:hover{
     cursor: pointer;
     opacity: .8;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
-    
-    /*background: var(--gris-sec-clair);
-    -webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 5px 15px 5px rgba(255,121,218,0); 
-    box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 5px 15px 5px rgba(255,121,218,0);*/       
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);         
 }
 .bouton:hover, .bouton-commander:hover{ 
     cursor: pointer;
@@ -670,7 +666,7 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: (1.3rem, 8vw, 5rem);    
+    font-size: clamp(1.3rem, 8vw, 5rem);    
 }
 .icone-coeur:hover{
     animation: remplissage-coeur 1s ease-in forwards;
@@ -1221,7 +1217,7 @@ header, main, footer {
 
 
 
-/* **** TABLETTES ET LAPTOP **** */
+/* **** FORMATS TABLETTES ET LAPTOP **** */
 
 @media screen and (min-width: 576px)
 {
@@ -1265,7 +1261,7 @@ header, main, footer {
 
 
 
-/* **** PC L et XL **** */
+/* **** FORMAT PC L et XL **** */
 
 @media screen and (min-width: 992px)
 {
@@ -1354,8 +1350,7 @@ header, main, footer {
         display: flex;
         flex-direction: column;
         align-items: center;
-    }  
-          
+    }         
     
     .choix {
         width: 30vw;
@@ -1413,42 +1408,71 @@ header, main, footer {
     .titre-souligné {
         margin-left: -4.5vw;
     }
-    
-
-    /* **** PC L et XL **** */
-
-    @media screen and (min-width: 1440px)
-    {
-        header, main{
-            max-width: 1320px;
-            margin: 0 auto;
-        }        
-        .img-note-enchantée {
-            height: 202px;            
-        }
-
-        .choix p {
-            margin: 5px 20px 0px 10px;            
-            font-size: clamp(11px, 1vw, 15px);
-        }
-        .choix h3 {
-            margin: 0px 20px 5px 10px;            
-            font-size: clamp(15px, 1.5vw, 15px);
-        }
-        .ligne-prix::before {       
-            position: absolute;
-            top: 0px;
-            right: -20%;
-            width: 20%;        
-        }
-        .ligne-prix::after {
-            
-            position: absolute;
-            top: 33%;
-            right: -9%;            
-            font-size: clamp(12px, 5vw, 22px);
-        }
-        
-        
+    .bloc-footer {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-left: 70px;
+        flex-direction: row;
+        margin: 0 auto;        
     }
+    .footer-donnees {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        align-items: baseline;
+        height: 182px;
+    }
+}   
+
+/* **** FORMAT XXL **** */
+
+@media screen and (min-width: 1440px)
+{
+    header, main{
+        max-width: 1320px;
+        margin: 0 auto;
+    }        
+    .img-note-enchantée {
+        height: 202px;            
+    }
+
+    .choix p {
+        margin: 5px 20px 0px 10px;            
+        font-size: clamp(11px, 1vw, 15px);
+    }
+    .choix h3 {
+        margin: 0px 20px 5px 10px;            
+        font-size: clamp(15px, 1.5vw, 15px);
+    }
+    .ligne-prix::before {       
+        position: absolute;
+        top: 0px;
+        right: -20%;
+        width: 20%;        
+    }
+    .ligne-prix::after {
+        
+        position: absolute;
+        top: 33%;
+        right: -9%;            
+        font-size: clamp(12px, 5vw, 22px);
+    }
+    .bloc-footer {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-left: 70px;
+        flex-direction: row;
+        margin: 0 auto;
+        width: 1320px;
+    }
+    .footer-donnees {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        align-items: baseline;
+        height: 189px;
+    }       
+    
 }
